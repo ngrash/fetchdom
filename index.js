@@ -1,9 +1,12 @@
 #!/usr/bin/env node
 
 var program = require('commander');
+var package = require('./package.json');
 
 program
   .arguments('<url>')
+  .description(package.description)
+  .version(package.version)
   .option('-s --save-image <path>', 'Write PNG screenshot to <path>')
   .action(run)
   .parse(process.argv);
