@@ -1,0 +1,19 @@
+{
+  "name": "renderdom",
+  "version": "0.0.1",
+  "description": "A command-line tool for saving the rendered DOM of a website.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ngrash/renderdom.git"
+  },
+  "author": "Nico Grashoff",
+  "license": "ISC",
+  "dependencies": {
+    "commander": "^2.11.0",
+    "phantomjs-prebuilt": "^2.1.15"
+  }
+}
