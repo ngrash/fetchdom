@@ -9,10 +9,8 @@ content as you scroll. So you recursively scroll down until scrolling does not
 trigger any more requests. You think this could be useful for others, so you
 publish it to [npm](https://www.npmjs.com/package/fetchdom).
 
-**If you are not me**, you just run `npm install --global fetchdom`, and
+**If you are not me**, you just run `npm install --global fetchdom` and
 continue writing your [regular expressions to parse the HTML](https://stackoverflow.com/a/1732454/159036).
-
-## Usage
 
 ```
 Usage: fetchdom [options] <url>
