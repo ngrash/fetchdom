@@ -3,7 +3,7 @@
   "version": "0.0.2",
   "description": "A command-line tool for saving the rendered DOM of a website.",
   "bin": {
-    "fetchdom": "./index.js"
+    "fetchdom": "./cli.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
