@@ -4,11 +4,16 @@
 //
 // A phantomjs script for saving the rendered DOM of a website after scrolling.
 //
-// Usage: phantomjs fetchdom.js <url> [image-path]
+// Usage: phantomjs fetchdom.js <url> [options]
 //
-// Running the command will open <url>, let all scripts run and then scroll to
-// the bottom of the page before storing an optional screenshot at [image-path]
-// and printing the rendered DOM to stdout.
+// Running the command will:
+// * download <url>
+// * run all scripts
+// * scroll to the bottom of the page
+// * print resulting DOM to stdout
+//
+// [options] is a base64-encoded JSON object that supports the following keys:
+// * saveImage: store a PNG of the final page to this location
 
 // Set a reasonable viewport size
 const VIEWPORT_WIDTH  = 1280;
@@ -24,7 +29,10 @@ var webPage = require('webpage');
 
 var page = webPage.create();
 var url = system.args[1];
-var imagePath = system.args[2];
+var options = {}
+if(system.args[2]) {
+  options = JSON.parse(atob(system.args[2]))
+}
 
 page.viewportSize = {
   width: 1280,
@@ -85,8 +93,8 @@ function scrollolol() {
             scrollolol();
           }
           else {
-            if(imagePath) {
-              page.render(imagePath);
+            if(options.saveImage) {
+              page.render(options.saveImage);
             }
             system.stdout.writeLine(page.content);
             phantom.exit();

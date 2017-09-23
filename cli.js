@@ -21,14 +21,16 @@ function run(url) {
   var phantomjs = require('phantomjs-prebuilt');
   var binPath = phantomjs.path;
 
+  var options = {}
+  if(program.saveImage) {
+    options.saveImage = program.saveImage;
+  }
+
   var childArgs = [
     path.join(__dirname, 'fetchdom.js'),
-    url
+    url,
+    btoa(JSON.stringify(options))
   ]
-
-  if(program.saveImage) {
-    childArgs.push(program.saveImage)
-  }
 
   var child = childProcess.spawn(binPath, childArgs);
   child.stdout.on('data', function(data) {
@@ -42,4 +44,8 @@ function run(url) {
       process.stderr.write("WARN: child process exited with non-zero code: " + code);
     }
   });
+}
+
+function btoa(str) {
+  return new Buffer(str.toString(), 'binary').toString('base64');
 }
