@@ -13,7 +13,7 @@
     "url": "https://github.com/ngrash/renderdom.git"
   },
   "author": "Nico Grashoff",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "commander": "^2.11.0",
     "phantomjs-prebuilt": "^2.1.15"
