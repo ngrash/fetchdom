@@ -1,7 +1,7 @@
-# renderdom
+# fetchdom
 
 ```
-Usage: renderdom [options] <url>
+Usage: fetchdom [options] <url>
 
   A command-line tool for saving the rendered DOM of a website.
 
@@ -15,4 +15,4 @@ Usage: renderdom [options] <url>
 
 ## Installation
 
-`npm install --global ngrash/renderdom`
+`npm install --global ngrash/fetchdom`

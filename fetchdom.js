@@ -1,10 +1,10 @@
 #!/usr/bin/env phantomjs
 
-// renderdom.js
+// fetchdom.js
 //
 // A phantomjs script for saving the rendered DOM of a website after scrolling.
 //
-// Usage: phantomjs renderdom.js <url> [image-path]
+// Usage: phantomjs fetchdom.js <url> [image-path]
 //
 // Running the command will open <url>, let all scripts run and then scroll to
 // the bottom of the page before storing an optional screenshot at [image-path]

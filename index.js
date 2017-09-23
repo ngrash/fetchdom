@@ -22,7 +22,7 @@ function run(url) {
   var binPath = phantomjs.path;
 
   var childArgs = [
-    path.join(__dirname, 'renderdom.js'),
+    path.join(__dirname, 'fetchdom.js'),
     url
   ]
 
