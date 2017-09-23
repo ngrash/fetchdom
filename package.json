@@ -1,6 +1,6 @@
 {
   "name": "fetchdom",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A command-line tool for saving the rendered DOM of a website.",
   "bin": {
     "fetchdom": "./cli.js"
